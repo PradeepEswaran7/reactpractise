@@ -1,0 +1,288 @@
+8-1-23 
+
+
+S/W prerequisit 
+nodejs 
+node -v
+npm -v 
+
+there are two ways to create react project 
+1.npx: there is no need to install confuguration file 
+     step1: npx create-react-app reactpro
+     step2: cd reactpro
+     step3: npm start 
+
+2.npm: need to install confuguration file
+
+
+*React:
+-it is a javascript library
+-which is use to create usser interfaces
+-react create single Page Application
+-it is not framework.
+
+
+-react is component basis, in react app.js is root component 
+-component: it is partial part of web app.
+            -it can be any part like header,footer,nav 
+            -which we can reuse 
+-in react index.html is only single html file which render on browser.
+
+How to get output on browser
+localhost:3000 
+
+-In React We have two type of component
+1.function component: when your main foccus is on UI design 
+2.class component: when you have deal with complex logic with UI 
+
+How will you get output of individual component.
+write component as tag where you want.
+
+
+*JSX(javascript XML):-it makes react code easy
+                     -it allows us to write html code in react.
+                     -in jsx we must have one parent element to wrap another multiple element.
+                     -parent element must be block element ex:div,p,h1,
+
+*props: 
+-it is parameter or funtional parameter which is use pass data inside component.
+-it return object type of data 
+-in function component we access it by writting props.propsName 
+-in class component we access it by writting this.props.props
+
+
+*state: 
+-it is use to handle essential data in class component
+-it is available in class component only.
+-it return object type of data.
+-it write in class component contructor.
+
+*setState() method:
+-it is use to manipulate state data in class component
+
+*Events and function or methodin react
+*how to change state property on custome by using event 
+
+
+*use of extension By Eno Yao 
+rafce : to create function component
+rce: to create class component
+rconst: to create contructor with super and state 
+
+
+*how to access constant file data 
+
+*how to use css 
+1. inline css: in starting tag we will use style property in that we write css property and value
+2. internal css: we css property in variable apply to an element
+3. External css : create a seperate css file and import in component.
+4. Module css : when we write css property for perticular component in that case we use it.
+               and it will apply onl when you inmport it.
+               -file must be sav with filename.module.css 
+
+*how to normal bootstrap in react 
+> npm i bootstrap
+
+step1: install bootstrap
+npm i bootstrap
+step2: import it in index.js file 
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+step3: use its inbuilt classes 
+
+*component Interaction
+-access data from parent component to child component
+-to establish parent child relation in between component for that we write child component tas in parent component render method
+
+*state as props to anothe component
+
+HOC(Heigher Order component):
+-when we have to share comman bussiness logic with multiple component in that case we use it.
+
+*React.Fragment:
+-it is an alternative for jsx 
+-it remove unnecessary div element form react 
+=========================================================
+9-11-23
+
+*conditional rendering 
+-display component output or view on browser conditionaly 
+1.if.. else : in this we put code in if and else block
+2.element as variable : in this we store result in variable and we return that perticular variable 
+3.ternary oprator : it is short hand syntax for if else 
+                    syntax: (condition)?truepart:falsepart;
+4.short circuit: it will render or display component output only when condition is true.
+                 syntax: (condition) && data to return ;
+
+*PureComponent: it prevent unnecessary re-rendering of class component.
+*React.memo:it prevent unnecessary re-rendering of function component.
+
+
+*Routing: 
+-navigating component or display component output by writting in path in browser url 
+-to perform routing in react for this we have to install react-router-dom library
+>  npm i react-router-dom
+
+-to perform routing we use BrowserRouter,Routes,Route
+
+1.naming Routing: by wrting path in browser url to display component view 
+2.default : display component by default without its name in browser url its must be blank.
+3.prameterize routing: display component view by passing parameter with path name.
+4.child Routing: defing one Routing inside another is called child routing, 
+  -to display child component output in main for that we use <Outlet> library in main component.
+5.wild-card Routing: 
+-when we write wrong path name in browser url in that case redirect to this routing. 
+-it is denoted by *
+-it must be last routing, its beloow routing will never work.
+
+*React Hooks: 
+-it allows us to use class feature in function component.
+-in react 16 version it introduce 
+-in react we have 6 hooks 
+
+1.useState Hooks:
+-it allows us to use state in function component
+-it gives two value in array 1.current-state,2.function to update current state 
+-in usestate hook we can pass number,string,boolean and object type of data.
+syntax: const [currentSate,FunctionToUpdateState] = useState();
+
+*how to render list by using map 
+
+*use of concurrently library
+step1:npm i -g concurrently
+step2:go to pakage.json file 
+"json-server":"cd src/shared/Database && json-server --watch -p 8888 db.json",
+"start:dev": "concurrently \"npm start\" \"npm run json-server\"",
+step3: npm run start:dev
+
+
+npm i -g json-server 
+npm i -g concurrently
+
+*Axios: it is use to make request form react Database server 
+npm i axios 
+
+*UseEffect():
+-it perform side effect in function component.
+-it use to perform dom manipulation 
+-database connection 
+-perform functionaly after rendering function component.
+
+*what is Material UI 
+-it is a seperate UI react library
+-which provide inbuilt componet 
+
+
+*how to install MUI 
+npm install @mui/material @emotion/react @emotion/styled
+
+*hhow to install material UI icon 
+npm install @mui/icons-material
+
+*we saw Axios 
+*we perform get request
+*we perform delete request 
+*we perform post request
+*we perform post request
+
+*webstorage 
+-it is use to store user data browser
+1.local storage : it store user permnantly on browser
+2.session storage : it will store user data for perticular time 
+
+localStorage.setItem("user1","Shakti")
+localStorage.getItem("user2")
+localStorage.removeItem("user2")
+localStorage.clear();
+
+*useRef() hook: it allows to use dom node direclty and 
+allows us to access its value and manipulate it.
+
+=========================================================
+10/11/23
+
+*protcting component from unauthorize user 
+*logout functionality 
+
+*Redux:
+-it is predictable state container for javascript Application
+-it store state centernaly and allows user to manage ,access, track to it.
+-it is not tied to react only,it will work with all javascript library (angular,react,viujs...)
+-it is mainly responsible to manage state 
+
+to use it in react firt we have install it 
+> npm i redux 
+
+to connect react and redux we have to install react-redux library
+> npm i react-redux 
+
+*redux works on three core core principle 
+-Store : it hold state of javascript Application.
+-Action : it is simple statment which we are going to perform 
+-Reducer : it actually carryout state transition depending Action.
+
+*folder tructure for reduc in react
+src folder 
+   -component folder
+      -redux folder 
+             -cakefolder 
+                 -cakeType.js file
+                 -cakeAction.js file 
+                 -cakeReducer.js file 
+
+             -store.js file 
+             -index.js file     
+
+*Action: it is plain javascript object which has type property containing string constant value.
+
+*Reducer :-it is method which return new state after perform action 
+          -it takes two parameter 1.initial-state, Action
+          -in this we use switch case  
+
+*state: in redux first we have create store from redux library          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

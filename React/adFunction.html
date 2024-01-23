@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="d1"></h1>
+    <h1 id="d2"></h1>
+    <h1 id="d3"></h1>
+    <script>
+        function greeting(){
+            document.write("Good Morning");
+            console.log("Good Morning");
+            // window.alert("Good Morning");
+            document.getElementById("d1").innerHTML="Hi";
+        }
+        greeting();
+    </script>
+    <br/> 
+    <script>
+        
+        function welcome(std, std2){
+            return `welcome you ${std} ${std2}`;
+        }
+        let data = welcome("Satya", " Sakthi<br>");
+        document.write(data);
+
+        //3. anonymous function: function with no name
+        let add = function(){
+            return 10+30;
+        }
+        document.write("<br>",add());
+        let add1 = function(n1,n2){
+            return n1+n2;
+        }
+        document.write("<br>",add1(10,40));
+
+        let sub =() =>{
+            return 90 - 20;
+        }
+        document.write("<br>",sub());
+
+        let sub2 =(n1,n2) => n1-n2;
+        document.write("<br>",sub2(110,30));
+
+
+    var fullName=(fname,lname,mname="")=>{
+        return `${fname} ${mname} ${lname}`;
+    } 
+    document.write("<br>",fullName("Pradeep","E"));
+    document.write("<br>",fullName("Pradeep","Sengodan","Eswaran"));
+
+    let stdList =(...std)=>{
+        return std;
+    }
+    document.write("<br>",stdList("Pradeep","Eswaran","Sengodan"));
+    </script>
+</body>
+</html>

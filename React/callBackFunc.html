@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function greeting(myName){
+        //     return `I am ${myName}`;
+        // }
+
+        // function callBack(yourName, greeting){
+        //     return `hello I am ${myName}, ${greeting(name)}`
+
+        // }
+        // let name ="RTA"
+        // let myName="pradeep"
+        // document.write(callBack(myName,greeting))
+
+        let std = ["Pradeep","Eswaran"];
+        console.log(std[1]="E")
+        // console.log(std)
+
+        let[s1,s2] = std;
+        console.log(s1,s2);
+
+        //object
+        // let emp = {
+        //         empId: 101,
+        //         empName:"satya",
+        //         empPost:"Fullstack Developer",
+        //         empSal:89000,
+        //         empSingle:true
+        //     }
+
+        //         document.write("<br>","Id:" +emp.empId+"name: "+emp.empName+ "Post: "+emp.empPost+"salary: "+emp.empSal+"Single: "+emp.empSingle);
+        //         document.write("<br>", `id: ${emp.empId} Name: ${emp.empName} Post: ${emp.empPost} salary: ${emp.empSal} Single: ${emp.empSingle}`)
+
+        //         // let id =emp.empId;
+        //         // let name= emp.empName;
+        //         // let Post = emp.empPost;
+
+        //         // Destructring Object
+
+        //         const {empId, empName,empPost,empSal,empSingle} =emp
+        //         console.log(empId)
+
+        // let std1 =["Pradeep","Eswaran"];
+        // std.forEach((val,index)=>{
+        //     if(val == "E"){
+        //         document.write(`${index} .${val} <br>`)
+        //     }
+        // })
+
+        // let arr = [1,2,3,5,8,9,11,13,14,15,18,19,20,21,22,25]
+        // let filterEven = arr.filter((val) =>{
+            
+            
+        //     return val%2 == 0;
+            
+        // })
+        // document.write(filterEven+"<br>")
+        // let filterOdd = arr.filter((val) =>{
+            
+            
+        //     return val%2 != 0;
+            
+        // })
+        // document.write(filterOdd)
+
+        // var emp =[
+        //     {id:101,ename:"Pradeep",epost:"Fullstack Developer",esalary:9800,gender:"M"},
+        //     {id:101,ename:"Pradeepa",epost:"Fullstack Developer",esalary:9800,gender:"F"},
+        //     {id:101,ename:"S",epost:"Fullstack Developer",esalary:9800,gender:"F"},
+        //     {id:101,ename:"Uma Maheswari",epost:"Fullstack Developer",esalary:9800,gender:"F"},
+        // ]
+        // emp.forEach((val) =>{
+            
+        //     document.write(`${val.id} ${val.ename} ${val.epost} ${val.esalary} ${val.gender} `)
+        // });
+        // let male = emp.filter((i) =>{
+        //         return i.gender === 'M';
+        // });
+        // console.log(male);
+
+        let add =(n1, n2) => n1+n2;
+        document.write(add(200,200))
+
+       let count = 0;
+       setInterval((c) => {
+           console.log("Hello");
+           console.log(count += 1);
+       }, 1000);
+
+       
+    </script>
+</body>
+</html>
